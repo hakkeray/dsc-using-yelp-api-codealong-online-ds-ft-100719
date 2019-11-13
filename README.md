@@ -92,7 +92,7 @@ So the line below would become:
 
 
 ```python
-keys = get_keys("/Users/YOUR_USERNAME_HERE/.secret/yelp_api.json")
+keys = get_keys("/Users/hakkeray/datascience/mod2/sec12/dsc-using-yelp-api-codealong-online-ds-ft-100719/.secret/yelp_api.json")
 
 api_key = keys['api_key']
 
@@ -132,7 +132,7 @@ print(response.text[:1000])
 
     <Response [200]>
     <class 'str'>
-    {"businesses": [{"id": "jeWIYbgBho9vBDhc5S1xvg", "alias": "holy-guacamole-astoria", "name": "Holy Guacamole", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/8IjT2jd7vKDSOmtdXPI-Zg/o.jpg", "is_closed": false, "url": "https://www.yelp.com/biz/holy-guacamole-astoria?adjust_creative=xNHtXRpNa-MXGFJJTHHUvw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=xNHtXRpNa-MXGFJJTHHUvw", "review_count": 108, "categories": [{"alias": "mexican", "title": "Mexican"}, {"alias": "bars", "title": "Bars"}], "rating": 4.0, "coordinates": {"latitude": 40.756621, "longitude": -73.929336}, "transactions": ["delivery", "pickup"], "price": "$$", "location": {"address1": "3555 31st St", "address2": "", "address3": "", "city": "Astoria", "zip_code": "11106", "country": "US", "state": "NY", "display_address": ["3555 31st St", "Astoria, NY 11106"]}, "phone": "+19178327261", "display_phone": "(917) 832-7261", "distance": 1290.4274875130448}, {"id": "6AJwsgXr7YwsqneGVAdgzw", "alias": "las-c
+    {"businesses": [{"id": "jeWIYbgBho9vBDhc5S1xvg", "alias": "chanos-cantina-astoria", "name": "Chano's Cantina", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/B34FXjfQrAxMkWUpb3Pv5A/o.jpg", "is_closed": false, "url": "https://www.yelp.com/biz/chanos-cantina-astoria?adjust_creative=12IMkq-xxD-jcDHiyMb-IQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=12IMkq-xxD-jcDHiyMb-IQ", "review_count": 163, "categories": [{"alias": "cocktailbars", "title": "Cocktail Bars"}, {"alias": "newmexican", "title": "New Mexican Cuisine"}], "rating": 4.0, "coordinates": {"latitude": 40.756621, "longitude": -73.929336}, "transactions": ["pickup", "restaurant_reservation", "delivery"], "price": "$$", "location": {"address1": "35-55 31st", "address2": "", "address3": "", "city": "Astoria", "zip_code": "11106", "country": "US", "state": "NY", "display_address": ["35-55 31st", "Astoria, NY 11106"]}, "phone": "+19178327261", "display_phone": "(917) 832-7261", "distance": 1290.427487513
 
 
 ## Breaking Down the Request
@@ -206,54 +206,51 @@ response.json()['businesses'][:2]
 
 
     [{'id': 'jeWIYbgBho9vBDhc5S1xvg',
-      'alias': 'holy-guacamole-astoria',
-      'name': 'Holy Guacamole',
-      'image_url': 'https://s3-media1.fl.yelpcdn.com/bphoto/8IjT2jd7vKDSOmtdXPI-Zg/o.jpg',
+      'alias': 'chanos-cantina-astoria',
+      'name': "Chano's Cantina",
+      'image_url': 'https://s3-media1.fl.yelpcdn.com/bphoto/B34FXjfQrAxMkWUpb3Pv5A/o.jpg',
       'is_closed': False,
-      'url': 'https://www.yelp.com/biz/holy-guacamole-astoria?adjust_creative=xNHtXRpNa-MXGFJJTHHUvw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=xNHtXRpNa-MXGFJJTHHUvw',
-      'review_count': 108,
-      'categories': [{'alias': 'mexican', 'title': 'Mexican'},
-       {'alias': 'bars', 'title': 'Bars'}],
+      'url': 'https://www.yelp.com/biz/chanos-cantina-astoria?adjust_creative=12IMkq-xxD-jcDHiyMb-IQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=12IMkq-xxD-jcDHiyMb-IQ',
+      'review_count': 163,
+      'categories': [{'alias': 'cocktailbars', 'title': 'Cocktail Bars'},
+       {'alias': 'newmexican', 'title': 'New Mexican Cuisine'}],
       'rating': 4.0,
       'coordinates': {'latitude': 40.756621, 'longitude': -73.929336},
-      'transactions': ['delivery', 'pickup'],
+      'transactions': ['pickup', 'restaurant_reservation', 'delivery'],
       'price': '$$',
-      'location': {'address1': '3555 31st St',
+      'location': {'address1': '35-55 31st',
        'address2': '',
        'address3': '',
        'city': 'Astoria',
        'zip_code': '11106',
        'country': 'US',
        'state': 'NY',
-       'display_address': ['3555 31st St', 'Astoria, NY 11106']},
+       'display_address': ['35-55 31st', 'Astoria, NY 11106']},
       'phone': '+19178327261',
       'display_phone': '(917) 832-7261',
       'distance': 1290.4274875130448},
-     {'id': '6AJwsgXr7YwsqneGVAdgzw',
-      'alias': 'las-catrinas-mexican-bar-and-eatery-astoria',
-      'name': 'Las Catrinas Mexican Bar & Eatery',
-      'image_url': 'https://s3-media3.fl.yelpcdn.com/bphoto/CKRiZUoyTUjs79bWnDEEpg/o.jpg',
+     {'id': '4cVajR3KnJh7cK9u_TiBAQ',
+      'alias': 'orale-mex-food-astoria',
+      'name': 'Orale Mex Food',
+      'image_url': 'https://s3-media2.fl.yelpcdn.com/bphoto/qqQwbjaIqkjj_OKB56Q8Fw/o.jpg',
       'is_closed': False,
-      'url': 'https://www.yelp.com/biz/las-catrinas-mexican-bar-and-eatery-astoria?adjust_creative=xNHtXRpNa-MXGFJJTHHUvw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=xNHtXRpNa-MXGFJJTHHUvw',
-      'review_count': 163,
-      'categories': [{'alias': 'mexican', 'title': 'Mexican'},
-       {'alias': 'cocktailbars', 'title': 'Cocktail Bars'}],
-      'rating': 4.0,
-      'coordinates': {'latitude': 40.7614214682633,
-       'longitude': -73.9246649456171},
-      'transactions': ['delivery', 'pickup'],
-      'price': '$$',
-      'location': {'address1': '32-02 Broadway',
+      'url': 'https://www.yelp.com/biz/orale-mex-food-astoria?adjust_creative=12IMkq-xxD-jcDHiyMb-IQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=12IMkq-xxD-jcDHiyMb-IQ',
+      'review_count': 2,
+      'categories': [{'alias': 'mexican', 'title': 'Mexican'}],
+      'rating': 4.5,
+      'coordinates': {'latitude': 40.770261, 'longitude': -73.918361},
+      'transactions': ['pickup', 'delivery'],
+      'location': {'address1': '30-19 Astoria Blvd',
        'address2': '',
-       'address3': None,
+       'address3': '',
        'city': 'Astoria',
-       'zip_code': '11106',
+       'zip_code': '11102',
        'country': 'US',
        'state': 'NY',
-       'display_address': ['32-02 Broadway', 'Astoria, NY 11106']},
-      'phone': '+19177450969',
-      'display_phone': '(917) 745-0969',
-      'distance': 642.5257707161409}]
+       'display_address': ['30-19 Astoria Blvd', 'Astoria, NY 11102']},
+      'phone': '+19173961753',
+      'display_phone': '(917) 396-1753',
+      'distance': 494.8529458975233}]
 
 
 
@@ -265,7 +262,7 @@ response.json()['total']
 
 
 
-    638
+    675
 
 
 
@@ -297,9 +294,9 @@ df.head() #Previews the first five rows.
 ```
 
     10
-    Index(['alias', 'categories', 'coordinates', 'display_phone', 'distance', 'id',
-           'image_url', 'is_closed', 'location', 'name', 'phone', 'price',
-           'rating', 'review_count', 'transactions', 'url'],
+    Index(['id', 'alias', 'name', 'image_url', 'is_closed', 'url', 'review_count',
+           'categories', 'rating', 'coordinates', 'transactions', 'price',
+           'location', 'phone', 'display_phone', 'distance'],
           dtype='object')
 
 
@@ -324,119 +321,119 @@ df.head() #Previews the first five rows.
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>alias</th>
-      <th>categories</th>
-      <th>coordinates</th>
-      <th>display_phone</th>
-      <th>distance</th>
       <th>id</th>
+      <th>alias</th>
+      <th>name</th>
       <th>image_url</th>
       <th>is_closed</th>
-      <th>location</th>
-      <th>name</th>
-      <th>phone</th>
-      <th>price</th>
-      <th>rating</th>
-      <th>review_count</th>
-      <th>transactions</th>
       <th>url</th>
+      <th>review_count</th>
+      <th>categories</th>
+      <th>rating</th>
+      <th>coordinates</th>
+      <th>transactions</th>
+      <th>price</th>
+      <th>location</th>
+      <th>phone</th>
+      <th>display_phone</th>
+      <th>distance</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
-      <td>holy-guacamole-astoria</td>
-      <td>[{'alias': 'mexican', 'title': 'Mexican'}, {'a...</td>
+      <td>0</td>
+      <td>jeWIYbgBho9vBDhc5S1xvg</td>
+      <td>chanos-cantina-astoria</td>
+      <td>Chano's Cantina</td>
+      <td>https://s3-media1.fl.yelpcdn.com/bphoto/B34FXj...</td>
+      <td>False</td>
+      <td>https://www.yelp.com/biz/chanos-cantina-astori...</td>
+      <td>163</td>
+      <td>[{'alias': 'cocktailbars', 'title': 'Cocktail ...</td>
+      <td>4.0</td>
       <td>{'latitude': 40.756621, 'longitude': -73.929336}</td>
+      <td>[pickup, restaurant_reservation, delivery]</td>
+      <td>$$</td>
+      <td>{'address1': '35-55 31st', 'address2': '', 'ad...</td>
+      <td>+19178327261</td>
       <td>(917) 832-7261</td>
       <td>1290.427488</td>
-      <td>jeWIYbgBho9vBDhc5S1xvg</td>
-      <td>https://s3-media1.fl.yelpcdn.com/bphoto/8IjT2j...</td>
-      <td>False</td>
-      <td>{'address1': '3555 31st St', 'address2': '', '...</td>
-      <td>Holy Guacamole</td>
-      <td>+19178327261</td>
-      <td>$$</td>
-      <td>4.0</td>
-      <td>108</td>
-      <td>[delivery, pickup]</td>
-      <td>https://www.yelp.com/biz/holy-guacamole-astori...</td>
     </tr>
     <tr>
-      <th>1</th>
+      <td>1</td>
+      <td>4cVajR3KnJh7cK9u_TiBAQ</td>
+      <td>orale-mex-food-astoria</td>
+      <td>Orale Mex Food</td>
+      <td>https://s3-media2.fl.yelpcdn.com/bphoto/qqQwbj...</td>
+      <td>False</td>
+      <td>https://www.yelp.com/biz/orale-mex-food-astori...</td>
+      <td>2</td>
+      <td>[{'alias': 'mexican', 'title': 'Mexican'}]</td>
+      <td>4.5</td>
+      <td>{'latitude': 40.770261, 'longitude': -73.918361}</td>
+      <td>[pickup, delivery]</td>
+      <td>NaN</td>
+      <td>{'address1': '30-19 Astoria Blvd', 'address2':...</td>
+      <td>+19173961753</td>
+      <td>(917) 396-1753</td>
+      <td>494.852946</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>6AJwsgXr7YwsqneGVAdgzw</td>
       <td>las-catrinas-mexican-bar-and-eatery-astoria</td>
+      <td>Las Catrinas Mexican Bar &amp; Eatery</td>
+      <td>https://s3-media3.fl.yelpcdn.com/bphoto/3uevye...</td>
+      <td>False</td>
+      <td>https://www.yelp.com/biz/las-catrinas-mexican-...</td>
+      <td>303</td>
       <td>[{'alias': 'mexican', 'title': 'Mexican'}, {'a...</td>
+      <td>4.0</td>
       <td>{'latitude': 40.7614214682633, 'longitude': -7...</td>
+      <td>[pickup, delivery]</td>
+      <td>$$</td>
+      <td>{'address1': '32-02 Broadway', 'address2': '',...</td>
+      <td>+19177450969</td>
       <td>(917) 745-0969</td>
       <td>642.525771</td>
-      <td>6AJwsgXr7YwsqneGVAdgzw</td>
-      <td>https://s3-media3.fl.yelpcdn.com/bphoto/CKRiZU...</td>
-      <td>False</td>
-      <td>{'address1': '32-02 Broadway', 'address2': '',...</td>
-      <td>Las Catrinas Mexican Bar &amp; Eatery</td>
-      <td>+19177450969</td>
-      <td>$$</td>
-      <td>4.0</td>
-      <td>163</td>
-      <td>[delivery, pickup]</td>
-      <td>https://www.yelp.com/biz/las-catrinas-mexican-...</td>
     </tr>
     <tr>
-      <th>2</th>
-      <td>chela-and-garnacha-astoria</td>
-      <td>[{'alias': 'mexican', 'title': 'Mexican'}, {'a...</td>
-      <td>{'latitude': 40.7557171543477, 'longitude': -7...</td>
-      <td>(917) 832-6876</td>
-      <td>1316.297661</td>
+      <td>3</td>
       <td>AUyKmFjpaVLwc3awfUnqgQ</td>
+      <td>chela-and-garnacha-astoria</td>
+      <td>Chela &amp; Garnacha</td>
       <td>https://s3-media1.fl.yelpcdn.com/bphoto/ChVbA1...</td>
       <td>False</td>
-      <td>{'address1': '33-09 36th Ave', 'address2': '',...</td>
-      <td>Chela &amp; Garnacha</td>
-      <td>+19178326876</td>
-      <td>$$</td>
-      <td>4.5</td>
-      <td>288</td>
-      <td>[delivery, pickup]</td>
       <td>https://www.yelp.com/biz/chela-and-garnacha-as...</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>de-mole-astoria-astoria</td>
-      <td>[{'alias': 'mexican', 'title': 'Mexican'}]</td>
-      <td>{'latitude': 40.7625999, 'longitude': -73.9129...</td>
-      <td>(718) 777-1655</td>
-      <td>917.683267</td>
-      <td>jzVv_21473lAMYXIhVbuTA</td>
-      <td>https://s3-media1.fl.yelpcdn.com/bphoto/v8jXvZ...</td>
-      <td>False</td>
-      <td>{'address1': '4220 30th Ave', 'address2': '', ...</td>
-      <td>De Mole Astoria</td>
-      <td>+17187771655</td>
-      <td>$$</td>
-      <td>4.0</td>
-      <td>314</td>
-      <td>[delivery, pickup]</td>
-      <td>https://www.yelp.com/biz/de-mole-astoria-astor...</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>maizal-restaurant-and-tequila-bar-astoria-2</td>
+      <td>363</td>
       <td>[{'alias': 'mexican', 'title': 'Mexican'}, {'a...</td>
-      <td>{'latitude': 40.759331, 'longitude': -73.926035}</td>
-      <td>(718) 406-9431</td>
-      <td>900.451091</td>
-      <td>QIsFsiOP3H_NkgeWST7GPA</td>
-      <td>https://s3-media4.fl.yelpcdn.com/bphoto/VOGwDm...</td>
-      <td>False</td>
-      <td>{'address1': '3207 34th Ave', 'address2': None...</td>
-      <td>Maizal Restaurant &amp; Tequila Bar</td>
-      <td>+17184069431</td>
+      <td>4.5</td>
+      <td>{'latitude': 40.7557171543477, 'longitude': -7...</td>
+      <td>[pickup, delivery]</td>
       <td>$$</td>
+      <td>{'address1': '33-09 36th Ave', 'address2': '',...</td>
+      <td>+19178326876</td>
+      <td>(917) 832-6876</td>
+      <td>1318.326547</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>jzVv_21473lAMYXIhVbuTA</td>
+      <td>de-mole-astoria-astoria</td>
+      <td>De Mole Astoria</td>
+      <td>https://s3-media1.fl.yelpcdn.com/bphoto/zZTTfd...</td>
+      <td>False</td>
+      <td>https://www.yelp.com/biz/de-mole-astoria-astor...</td>
+      <td>359</td>
+      <td>[{'alias': 'mexican', 'title': 'Mexican'}]</td>
       <td>4.0</td>
-      <td>257</td>
-      <td>[delivery, pickup]</td>
-      <td>https://www.yelp.com/biz/maizal-restaurant-and...</td>
+      <td>{'latitude': 40.7625999, 'longitude': -73.9129...</td>
+      <td>[pickup, delivery]</td>
+      <td>$$</td>
+      <td>{'address1': '4220 30th Ave', 'address2': '', ...</td>
+      <td>+17187771655</td>
+      <td>(718) 777-1655</td>
+      <td>918.092772</td>
     </tr>
   </tbody>
 </table>
